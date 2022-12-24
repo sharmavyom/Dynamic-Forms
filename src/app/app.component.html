@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <br /><br />
+    <div class="col-6 offset-3"></div>
+  </div>
+  <!-- Content here -->
+  <div class="row">
+    <br /><br />
+    <div class="col-6 offset-3">
+      <select class="form-select" [(ngModel)]="selectedOption" (change)="onDropDownChange()">
+        <option value="">Choose Form</option>
+        <option *ngFor="let option of options" [ngValue]="option.DisplayName" >
+          {{ option.DisplayName }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <ng-container
+  appComponentHoster></ng-container>
+</div>
